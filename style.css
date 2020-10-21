@@ -1,0 +1,296 @@
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.625rem;
+}
+
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    background-color: #58B19F;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.container {
+    max-width:  1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+label {
+    color: #454545;
+    display: block;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+input, select {
+    padding: 8px 15px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #ebebeb;
+    /* min-width: 500px; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: block;
+    /* width: 100%; */
+}
+
+input {
+    display: block;
+    width: 80%;
+    min-width: 300px;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+/* Name App */
+
+
+.my-countdown-app {
+    text-align: center;
+    font-family: 'Architects Daughter', cursive  ;
+    position: relative;
+    font-weight: bold;
+    color: #d63031;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+.my-countdown-app::after {
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 4px;
+    background-color: #d63031;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*==== Box input Start css====== */
+
+
+
+.time-input {
+    padding: 60px 0;
+    font-size: 3rem;
+
+
+}
+
+.input-style {
+    display: grid;
+    grid-template-columns: 6fr 3fr 3fr;
+    column-gap: 30px;
+    row-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-style__bc {
+    position: relative;
+}
+
+.input-style__bc  .option-img {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+
+.title-birthday-text {
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.title-birthday-text--roboto {
+    font-family: 'Roboto', sans-serif;
+}
+.title-birthday-text--sans-serif {
+    font-family: sans-serif ;
+}
+.title-birthday-text--lobster {
+    font-family: 'Lobster', cursive  ;
+}
+.title-birthday-text--architects-daughter {
+    font-family: 'Architects Daughter', cursive  ;
+}
+
+.countdownBtn {
+    margin-top: 30px;
+}
+
+.countdownBtn  a{
+    display: inline-block;
+    padding: 10px 25px;
+    outline: none;
+    cursor: pointer;
+    background-color: #44bd32;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Architects Daughter', cursive  ;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+}
+.countdownBtn  a:hover {
+    background-color: #273c75;
+}
+
+/*==== Box input End css====== */
+
+
+
+
+
+/*==== Box Countdown Start CSS====== */
+
+
+h1.msg {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 36px;
+    /* padding-top: 30px; */
+    padding: 10px 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7)
+    
+}
+
+.countdown-area {
+    margin: 60px 0;
+    width: 100%;
+    min-height: 500px;
+    transition: 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    transition: 0.4s;
+    visibility: hidden;
+}
+.countdown-area--show {
+    opacity: 1;
+    visibility: visible;
+}
+#reset-btn {
+    display: inline-block;
+    padding: 6px 20px;
+    background-color: #8e44ad;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: 500;
+    display: none;
+}
+#reset-btn:hover {
+    background-color: #82589F;
+}
+
+.countdown-clock {
+    max-width: 800px;
+    margin: auto;
+    background-color: #2F4A6F;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+.countdown-clock ul {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countdown-clock ul li {
+    text-align: center;
+    min-width: 150px;
+    /* background-color: #444; */
+    height: 166px;
+    position: relative;
+    margin: 5px;
+}
+.countdown-clock ul li .time-el{
+    color: #fff;
+    font-size: 80px;
+    /* background-color: red; */
+    
+
+}
+.countdown-clock ul li .seconds-el {
+    color: #ED5486;
+}
+.countdown-clock ul li p {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 20px;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+/*==== Box Countdown End CSS====== */
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 992px) {
+    .input-style {
+        grid-template-columns: 1fr;
+    }
+}

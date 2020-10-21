@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown birthday with vanilla js</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link font gg -->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- ========== Box input Area Start ======== -->
+    <h1 class="my-countdown-app">My Countdown App =))</h1>
+    <div class="time-input">
+        <div class="container">
+            <div class="input-style">
+                <div class="input-style__title">
+                    <label for="title-birthday">Countdown title:</label>
+                    <input type="text" name="title-birthday" id="title-birthday" class="title-birthday" placeholder="Say something" >
+                </div>
+                <div class="input-style__font-style">
+                    <label for="title-font">Font Style:</label>
+                    <select name="title-font" id="title-font">
+                        <option value="sans-serif">Sans Serif</option>
+                        <option value="lobster">Lobster</option>
+                        <option value="roboto">Roboto</option>
+                        <option value="architects-daughter">Architects Daughter</option>
+                    </select>
+                </div>
+                <div class="input-style__bc">
+                    <label for="title-bc">BackGround:</label>
+                    <select name="title-bc" id="title-bc">
+                        <option value="snow">Snow</option>
+                        <option value="birthday">Birthday Cake</option>
+                        <option value="gift">Birthday Gift</option>
+                        <option value="smile">Smile</option>
+                        
+                    </select>
+            
+                </div>
+            </div>
+            <div class="title-birthday-text">
+                Happy Birthday title
+            </div>
+            <div class="date-input">
+                <label for="birthday-input">Your Next Birthday:</label>
+
+                <input type="date" id="birthday-input" name="trip-start"
+                    value="2020-12-27"
+                    min="1900-01-01" max="2099-12-31" style="max-width: 500px;">
+            </div>
+
+            <div class="countdownBtn">
+                <a id="countdown-btn" href="#" >Create Countdown</a>
+            </div>
+        </div>
+
+    </div>
+<!-- ========== Box input Area End ======== -->
+
+    
+<div class="countdown-area" id="countdown-area">
+    <a href="index.html" id="reset-btn">Reset</a>
+    <h1 class="msg" title=""> </h1>
+    <div class="countdown-clock">
+        <ul>
+            <li>
+                <div class="days-el time-el">00</div>
+                <p>Days</p>
+            </li>
+            <li>
+                <div class="hours-el time-el">00</div>
+                <p>Hours</p>
+            </li>
+            <li>
+                <div class="minutes-el time-el">00</div>
+                <p>Minutes</p>
+            </li>
+            <li>
+                <div class="seconds-el time-el">00</div>
+                <p>Seconds</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- src JS -->
+    <script src="main.js"></script>
+</body>
+</html>
