@@ -207,6 +207,8 @@ h1.msg {
     opacity: 0;
     transition: 0.4s;
     visibility: hidden;
+    background-color: #7d5fff;
+
 }
 .countdown-area--show {
     opacity: 1;
